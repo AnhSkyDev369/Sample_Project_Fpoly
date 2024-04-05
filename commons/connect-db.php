@@ -6,9 +6,8 @@ $port = DB_PORT;
 $dbname = DB_NAME;
 
 try {
-    $conn = new PDO("mysql:host=$$host;port=$port;dbname=$dbname", DB_USERNAME, DB_PASSWORD);
+    $conn = new PDO("mysql:host=$host;port=$port;dbname=$dbname", DB_USERNAME, DB_PASSWORD);
     // set the PDO error mode to exception
-
     // Cài đặt chế độ báo lỗi là Xử lý ngoại lệ
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

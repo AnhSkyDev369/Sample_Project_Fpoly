@@ -1,8 +1,8 @@
 <?php
 function homeIndex()
 {
-   $dataUser = getAllUser();
-
+   $users = getAllUser();
+   // debug($dataUser);
    require_once PATH_VIEW . 'home.php';
 }
 
