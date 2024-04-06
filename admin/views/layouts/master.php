@@ -6,25 +6,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <title><?= $title ?? 'Dashboard' ?> - Admin</title>
+    <!-- <meta name="description" content="">
+    <meta name="author" content=""> -->
+
+    <title><?=$title ?? 'Dashboard'?> - Admin</title>
 
     <!-- Custom fonts for this template-->
-    <link href="<?= BASE_URL ?>assets/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="<?=BASE_URL?>assets/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="<?= BASE_URL ?>assets/admin/css/sb-admin-2.min.css" rel="stylesheet">
-
-    <?php 
-        if (isset($style) && $style) {
-            require_once PATH_VIEW_ADMIN . 'styles/' . $style . '.php';
-        }
-
-        if (isset($style2) && $style2) {
-            require_once PATH_VIEW_ADMIN . $style2 . '.php';
-        }
-    ?>
+    <link href="<?=BASE_URL?>assets/admin/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -34,7 +28,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <?php require_once PATH_VIEW_ADMIN . "layouts/partials/sidebar.php"; ?>
+        <?php require_once PATH_VIEW_ADMIN . "layouts\partials\sidebar.php";?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -43,19 +37,19 @@
             <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
-                <?php require_once PATH_VIEW_ADMIN . "layouts/partials/topbar.php"; ?>
-                <!-- End of Topbar -->
+                <!-- Main-Topbar -->
+                <?php require_once PATH_VIEW_ADMIN . "layouts\partials\main-topbar.php";?>
+                <!-- End of Main-Topbar -->
 
                 <!-- Begin Page Content -->
-                <?php require_once PATH_VIEW_ADMIN . $view . '.php'; ?>
+                <?php require_once PATH_VIEW_ADMIN . $view . '.php'?>
                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php require_once PATH_VIEW_ADMIN . "layouts/partials/footer.php"; ?>
+            <?php require_once PATH_VIEW_ADMIN . "layouts\partials\main-footer.php";?>
             <!-- End of Footer -->
 
         </div>
@@ -70,28 +64,23 @@
     </a>
 
     <!-- Logout Modal-->
-    <?php require_once PATH_VIEW_ADMIN . "components/logout-modal.php"; ?>
-
+    <?php require_once PATH_VIEW_ADMIN . "components\logout-model.php";?>
     <!-- Bootstrap core JavaScript-->
-    <script src="<?= BASE_URL ?>assets/admin/vendor/jquery/jquery.min.js"></script>
-    <script src="<?= BASE_URL ?>assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src=" <?=BASE_URL?>assets/admin/vendor/jquery/jquery.min.js"></script>
+    <script src=" <?=BASE_URL?>assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="<?= BASE_URL ?>assets/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src=" <?=BASE_URL?>assets/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="<?= BASE_URL ?>assets/admin/js/sb-admin-2.min.js"></script>
+    <script src=" <?=BASE_URL?>assets/admin/js/sb-admin-2.min.js"></script>
 
-    <?php 
-        if (isset($script) && $script) {
-            require_once PATH_VIEW_ADMIN . 'scripts/' . $script . '.php';
-        }
 
-        if (isset($script2) && $script2) {
-            require_once PATH_VIEW_ADMIN . $script2 . '.php';
-        }
-    ?>
-
+<?php
+    if (isset($script) && $script) {
+        require_once PATH_VIEW_ADMIN . 'scripts/' . $script .'.php';
+    }
+?>
 </body>
 
 </html>

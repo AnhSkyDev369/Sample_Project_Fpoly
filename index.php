@@ -4,7 +4,7 @@
 require_once './commons/env.php';
 require_once './commons/helper.php';
 require_once './commons/connect-db.php';
-require_once './commons/crud-db.php';
+require_once './commons/model.php';
 
 // Require tất cả các file có trong controllers và models
 require_file(PATH_CONTROLLER);
@@ -41,13 +41,13 @@ require_file(PATH_MODEL);
 // ]);
 // die;
 
-delete('users', 7, [
-    'name' => 'anhnt',
-    'email' => 'anhntph36206@fpt.edu.vn',
-    'password' => 'Anhnt4556',
-    'type' => 1
-]);
-die;
+// delete('users', 7, [
+//     'name' => 'anhnt',
+//     'email' => 'anhntph36206@fpt.edu.vn',
+//     'password' => 'Anhnt4556',
+//     'type' => 1
+// ]);
+// die;
 
 
 //Điều hướng
